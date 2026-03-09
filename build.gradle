@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group = 'local.simplezones'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+    maven { url 'https://maven.enginehub.org/repo/' }
+}
+
+dependencies {
+    compileOnly('org.spigotmc:spigot-api:1.21.1-R0.1-SNAPSHOT')
+    compileOnly('com.sk89q.worldedit:worldedit-bukkit:7.3.6') { transitive = false }
+    compileOnly('com.sk89q.worldedit:worldedit-core:7.3.6')   { transitive = false }
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+jar {
+    archiveFileName = 'SimpleZones-1.0.0.jar'
+}

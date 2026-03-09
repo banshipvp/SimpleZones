@@ -1,0 +1,14 @@
+name: SimpleZones
+version: 1.0.0
+main: local.simplezones.SimpleZonesPlugin
+api-version: "1.21"
+depend: [WorldEdit]
+commands:
+  zone:
+    description: Manage warzone/safezone regions
+    usage: /zone <create|delete|list|info>
+    permission: simplezones.admin
+permissions:
+  simplezones.admin:
+    description: Access to zone management commands
+    default: op
